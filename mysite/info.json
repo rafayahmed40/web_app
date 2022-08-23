@@ -1,0 +1,56 @@
+{
+"JOBS":[{
+    "Title": "Backend Engineer Intern",
+    "Employer": "Google",
+    "Description": "GENERAL RESPONSIBILITIES: ● Work with the team to build and deploy our applications ● Fix things on our servers ● Create new software ● Test your code ● Review your peer's code SPECIFIC RESPONSIBILITIES: ● AIP and Backend Development ● Database Management ● Feature Development in Python",
+    "Positions": 2,
+    "Location": "New York",
+    "Majors": ["Engineering", "Computer Science"],
+    "Image": "https://blog.hubspot.com/hubfs/image8-2.jpg"
+    },
+    {
+    "Title": "Software Engineering Co-op",
+    "Employer": "SIG",
+    "Description": "Responsibilities The responsibilities include design, implementation, testing and support of product features: •Design includes participating in defining and interpreting feature requests and designing product and features for stability, usability, and maintainability. •Implementation includes using the latest development tools to turn the designs into actual software products. •Testing responsibilities include both unit testing as well as providing additional guidance and support to the certification group. •Support includes maintaining the existing code base and providing assistance to the support group.",
+    "Positions": 1,
+    "Location": "Philadelphia",
+    "Majors": ["Engineering", "Computer Science"],
+    "Image": "https://content.energage.com/company-images/SE91833/SE91833_logo_orig.png"},
+    {
+    "Title": "Finance Intern",
+    "Employer": "Facebook",
+    "Description": "The job candidate will be working with Amazon Web Services and DevOps Processes within Infrastructure Team in a Large Enterprise. He or she will be exposed to various aspects of Infrastructure-As-Code and modern cloud technologies. He or she will help the company with creating automations, handling key operational processes and helping teams be productive in this environment.",
+    "Positions": 3,
+    "Location": "Chicago",
+    "Majors": ["Finance"],
+    "Image": "https://static.dezeen.com/uploads/2021/11/meta-facebook-rebranding-name-news_dezeen_2364_col_hero2.jpg"},
+    {
+    "Title": "Data Management Co-op",
+    "Employer": "Facebook",
+    "Description": "The primary responsibility of the Data Management Co-op is to enhance and support Brandywine Global Investment Management business intelligence reporting, data integration, and data transformation solutions. The Data Management Co-op will design, implement, and maintain business intelligence reports leveraging data in our enterprise data hub, targeted operational databases, or other sources across the firm. The Data Management Co-op will design, implement, and maintain data integration solutions leveraging our ELT (Extract, Load, and Transform) tool. In this role, the Data Management Co-op will work with end users and with Information Management staff to build requirements and implement solutions to meet the needs of our business.",
+    "Positions": 1,
+    "Location": "Chicago",
+    "Majors": ["Computer Science"],
+    "Image": "https://static.dezeen.com/uploads/2021/11/meta-facebook-rebranding-name-news_dezeen_2364_col_hero2.jpg"},
+    {
+    "Title": "Full Stack Developer",
+    "Employer": "Amazon",
+    "Description": "The job candidate will be working with Amazon Web Services and DevOps Processes within Infrastructure Team in a Large Enterprise. He or she will be exposed to various aspects of Infrastructure-As-Code and modern cloud technologies. He or she will help the company with creating automations, handling key operational processes and helping teams be productive in this environment.",
+    "Positions": 1,
+    "Location": "New York",
+    "Majors": ["Computer Science"],
+    "Image": "https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"},
+    {
+    "Title": "Engineering CO-OP",
+    "Employer": "Tesla",
+    "Description": "About The Team Tesla is seeking highly motivated post-secondary interns to contribute to the design and development of new factory layout and material flow for our advanced production facilities. This is an exciting opportunity to be a part of the team building “the machine that makes the machine.” Tesla is a demanding and fast-paced environment where you will work on a critical subsystem of incredibly exciting products. What To Expect Qualified applicants may be reviewed by one or more of the following teams: • Factory Layout Design: You’ll contribute to developing a factory design which supports seamless integration between production, packaging, material flow, supply chain, construction, and facilities teams. • Material Flow Automation: You’ll focus on the efficient and reliable flow of material to the Tesla manufacturing lines and the storage of material to improve overall operational efficiency and factory output by managing technical projects from “cradle to grave”.  • Production Optimization You’ll work with the teams designing production lines for the factory to ensure that their layouts align with the overall vision for the factory - identifying production constraints and developing and deploying a framework of continuous improvement utilizing lean principles.",
+    "Positions": 1,
+    "Location": "Boston",
+    "Majors": ["Engineering"],
+    "Image" : "https://cdn.mos.cms.futurecdn.net/xz4NVQhHaHShErxar7YLn.jpg" 
+    }   
+    ],
+"EMPLOYERS": ["Google", "Facebook", "SIG", "Amazon", "Tesla"],
+"MAJORS": ["Engineering", "Finance", "Computer Science"],
+"LOCATIONS": ["Philadelphia", "Boston", "New York", "Chicago"]
+}
