@@ -6,7 +6,24 @@ $(function(){
             var name = data['name'];
             $("#name-container").append(`<h1>Welcome, ${name}</h1>`)
     }})
+    getJobs();
 })
+
+function getJobs(){
+    $.ajax({
+        url: "ajax/get_jobs",
+        success: function(data){
+            var jobs = data['jobs'];
+            console.log(jobs);
+            if (jobs){
+                $("#jobs-container").append(`<h1>Jobs Applied:</h1>`);
+                for (let i = 0; i < jobs.length; i++){
+                    $("#jobs-container").append(`<h6>Jobs Applied: ${jobs[i]}</h6><br>`);
+                }
+            }
+                 
+    }})
+}
 
 function changeName(){
     

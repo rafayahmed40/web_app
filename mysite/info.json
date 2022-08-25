@@ -6,7 +6,8 @@
     "Positions": 2,
     "Location": "New York",
     "Majors": ["Engineering", "Computer Science"],
-    "Image": "https://blog.hubspot.com/hubfs/image8-2.jpg"
+    "Image": "https://blog.hubspot.com/hubfs/image8-2.jpg",
+    "Num": 1
     },
     {
     "Title": "Software Engineering Co-op",
@@ -15,7 +16,8 @@
     "Positions": 1,
     "Location": "Philadelphia",
     "Majors": ["Engineering", "Computer Science"],
-    "Image": "https://content.energage.com/company-images/SE91833/SE91833_logo_orig.png"},
+    "Image": "https://content.energage.com/company-images/SE91833/SE91833_logo_orig.png",
+    "Num": 2},
     {
     "Title": "Finance Intern",
     "Employer": "Facebook",
@@ -23,7 +25,8 @@
     "Positions": 3,
     "Location": "Chicago",
     "Majors": ["Finance"],
-    "Image": "https://static.dezeen.com/uploads/2021/11/meta-facebook-rebranding-name-news_dezeen_2364_col_hero2.jpg"},
+    "Image": "https://static.dezeen.com/uploads/2021/11/meta-facebook-rebranding-name-news_dezeen_2364_col_hero2.jpg",
+    "Num": 3},
     {
     "Title": "Data Management Co-op",
     "Employer": "Facebook",
@@ -31,7 +34,8 @@
     "Positions": 1,
     "Location": "Chicago",
     "Majors": ["Computer Science"],
-    "Image": "https://static.dezeen.com/uploads/2021/11/meta-facebook-rebranding-name-news_dezeen_2364_col_hero2.jpg"},
+    "Image": "https://static.dezeen.com/uploads/2021/11/meta-facebook-rebranding-name-news_dezeen_2364_col_hero2.jpg",
+    "Num": 4},
     {
     "Title": "Full Stack Developer",
     "Employer": "Amazon",
@@ -39,7 +43,8 @@
     "Positions": 1,
     "Location": "New York",
     "Majors": ["Computer Science"],
-    "Image": "https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"},
+    "Image": "https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
+    "Num": 5},
     {
     "Title": "Engineering CO-OP",
     "Employer": "Tesla",
@@ -47,8 +52,8 @@
     "Positions": 1,
     "Location": "Boston",
     "Majors": ["Engineering"],
-    "Image" : "https://cdn.mos.cms.futurecdn.net/xz4NVQhHaHShErxar7YLn.jpg" 
-    }   
+    "Image" : "https://cdn.mos.cms.futurecdn.net/xz4NVQhHaHShErxar7YLn.jpg",
+    "Num": 6}
     ],
 "EMPLOYERS": ["Google", "Facebook", "SIG", "Amazon", "Tesla"],
 "MAJORS": ["Engineering", "Finance", "Computer Science"],

@@ -73,7 +73,7 @@ function validate_reg(name, password, email){
     })
 }
 
-function save_info(name, email, pass){
+function save_info(name, pass, email){
     data_dict = {
         "name": name,
         "email": email,

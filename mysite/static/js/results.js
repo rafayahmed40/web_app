@@ -43,8 +43,32 @@ function updateResults(link){
     })
 }
 
+function apply(job_num){
+    console.log(job_num);
+    data_dict = {
+        "job_num": job_num
+    }
+    $.ajax({
+        data: data_dict,
+        url: "ajax/apply",
+        success: function(data){
+            ret = data['Response'];
+            if (ret){
+                var link = window.location.href;
+                alert("Applied to job successfully");
+                window.location = link;
+            }  
+
+        },
+        error: function(xhr, status, error){
+            console.log(status);
+            console.log(error);
+        }
+    })
+}
+
+
 function addDropdowns(data){
-    console.log(data);
     for (let i = 0; i < data.length; i++){
         var job = data[i];
         var title = job['Title'];
@@ -54,6 +78,7 @@ function addDropdowns(data){
         var majors = job['Majors'];
         var image = job['Image']
         var majors_st = ""
+        var num = job['Num'];
         for (let j = 0; j < majors.length; j++){
             majors_st = majors_st.concat(majors[j], ",");
         }
@@ -69,7 +94,7 @@ function addDropdowns(data){
         div_st = div_st.concat(`<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#data-${i}" aria-expanded="false" aria-controls="collapseExample">View Description</button>`);
         div_st = div_st.concat(`<div class="collapse" id="data-${i}">`);
         div_st = div_st.concat(`<br><div class="card card-body">`);
-        div_st = div_st.concat(`<h6>${description}<h6></div></div></div><br>`);
+        div_st = div_st.concat(`<h6>${description}<h6><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#apply-${num}" aria-expanded="false" aria-controls="collapseExample" onclick=apply(${num})>Apply Now</button></div></div></div><br>`);
 
         $('#res-container').append(div_st);
 

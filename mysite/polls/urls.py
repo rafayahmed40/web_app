@@ -19,4 +19,6 @@ urlpatterns = [
     path('ajax/change_name', views.change_name, name='portal'),
     path('ajax/change_pass', views.change_pass, name='portal'),
     path('ajax/change_email', views.change_email, name='portal'),
+    path('results/ajax/apply', views.apply, name="apply"),
+    path('ajax/get_jobs', views.get_jobs, name="apply")
 ]

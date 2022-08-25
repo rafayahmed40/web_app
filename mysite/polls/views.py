@@ -27,6 +27,39 @@ def login(request):
 def register(request):
     return render(request, "register.html", context)
 
+def get_jobs(request):
+    curr_username, curr_email = calc_active()
+    all_users = models.User.objects.all()
+    jobs = []
+    for user in all_users:
+        if user.email == curr_email:
+            for i in range(0, len(user.jobs)-1, 2):
+                job_num = int(user.jobs[i])
+                for j in context['JOBS']:
+                    if j['Num'] == job_num:
+                        jobs.append('{}, {}'.format(j['Title'], j['Employer']))
+    return JsonResponse({"jobs": jobs})
+
+def apply(request):
+    query = request.GET
+    valid = True
+    logger.debug("Apply query--\n{}".format(query))
+    job_num = query.getlist("job_num")[0]
+    curr_username, curr_email = calc_active()
+    logger.debug("Curr active--\n{}".format(curr_email))
+    all_users = models.User.objects.all()
+    for user in all_users:
+        if user.email == curr_email:
+            curr_jobs = user.jobs
+            logger.debug("curr jobs--\n{}".format(user.jobs))
+            curr_jobs += "{},".format(job_num)
+            logger.debug("curr jobs--\n{}".format(user.jobs))
+            user.jobs = curr_jobs
+            user.save()
+            
+            logger.debug("New jobs--\n{}".format(user.jobs))
+    return JsonResponse({"Response":valid})
+
 def change_name(request):
     all_users = models.User.objects.all()
     curr_username, curr_user_email = calc_active()
@@ -110,8 +143,10 @@ def validate_login(request):
     email = query.getlist("email")[0]
     password = query.getlist("pass")[0]
     all_users = models.User.objects.all()
+    logger.debug("LOGIN QUERY----\n{}".format(query))
     valid = False
     for user in all_users:
+        logger.debug("USER INFO---{}\n{}".format(user.email, user.password))
         if user.email == email and user.password == password:
             user.status = str(datetime.now().timestamp())
             user.save()
@@ -119,11 +154,13 @@ def validate_login(request):
     return JsonResponse({"Response":valid})
 
 def save_info(request):
-    logger.debug("GETS HERE---\n")
+    logger.debug("SAVES INFO---\n")
     query = request.GET
+    logger.debug(query)
     email = query.getlist("email")[0]
     name = query.getlist("name")[0]
     password = query.getlist("pass")[0]
+    logger.debug("USER INFO---{}\n{}".format(email, password))
     user = models.User(name=name, password=password, email=email, status="")
     user.save()
     return JsonResponse({"Response":"Success"})
@@ -183,7 +220,7 @@ def getResults(request):
             else:
                 ct += 1
             if ct == 3:
-                query_jobs["JOBS"].append(i)
+                query_jobs["JOBS"].append(i) 
     else:
         query_jobs["JOBS"] = avail_jobs
 
@@ -194,7 +231,6 @@ def desc(request):
     return render(request, "jd.html", context)
 
 def dropdowns(request):
-    logger.debug("dropdown\n\n")
     dropdowns = {}
     dropdowns['EMPLOYERS'] = context['EMPLOYERS']
     dropdowns['MAJORS'] = context['MAJORS']
